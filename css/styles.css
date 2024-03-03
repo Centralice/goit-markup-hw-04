@@ -126,6 +126,10 @@ section {
   color: #404bbf;
 }
 
+.active {
+  position: relative;
+}
+
 .active::after {
   content: "";
   display: block;
@@ -419,7 +423,7 @@ footer > .container {
   align-items: baseline;
 }
 
-.footer-header {
+.footer-social-paragraph {
   margin-bottom: 16px;
   color: #fff;
   font-family: Roboto;
