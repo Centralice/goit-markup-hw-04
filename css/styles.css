@@ -101,6 +101,7 @@ section {
 }
 
 .header-menu-item {
+  position: relative;
 }
 
 .header-menu-link {
@@ -116,6 +117,17 @@ section {
 .header-menu-link:hover,
 .header-menu-link:focus {
   color: #404bbf;
+}
+
+.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: #404bbf;
+  position: absolute;
+  bottom: 0;
 }
 
 .address {
@@ -140,7 +152,16 @@ section {
 }
 
 .hero {
-  background: #2e2f42;
+  background-color: #2e2f42;
+
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/home-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   padding-top: 188px;
   padding-bottom: 188px;
 }
@@ -189,6 +210,19 @@ section {
 .features-item {
   width: calc((100% - 72px) / 4);
 }
+
+.features-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #8e8f99;
+  background: #f4f4fd;
+  height: 112px;
+  flex-shrink: 0;
+  margin-bottom: 8px;
+}
+
 .features-item-name {
   color: #2e2f42;
   font-size: 20px;
@@ -249,6 +283,33 @@ section {
   letter-spacing: 0.02em;
 }
 
+.social-media {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.social-media-item {
+  width: 40px;
+  height: 40px;
+}
+.social-media-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+}
+
+.social-media-link:hover {
+  background-color: #404bbf;
+}
+
+.social-media-icon {
+  fill: #f4f4fd;
+}
+
 .portfolio {
 }
 .portfolio-title {
@@ -268,7 +329,38 @@ section {
 .portfolio-item {
   flex-basis: calc((100% - 48px) / 3);
 }
+
+.portfolio-item.transform:hover .cashless-payment {
+  transform: translateY(0);
+
+}
+
 .portfolio-img {
+}
+
+.cashless-payment-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.cashless-payment {
+  position: absolute;
+  top: 0;
+  background: #4d5ae5;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: linear;
+}
+.cashless-payment-paragraph {
+  color: #f4f4fd;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 .portfolio-text {
@@ -298,12 +390,39 @@ section {
   padding-bottom: 100px;
 }
 
+footer > .container {
+  display: flex;
+  gap: 120px;
+}
+
+.footer-header {
+  margin-bottom: 16px;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
 .footer-text {
   color: #f4f4fd;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   max-width: 264px;
+}
+
+.footer .social-media {
+  gap: 16px;
+}
+.footer .social-media-link:hover {
+  background-color: #31d0aa;
+}
+
+.footer .social-media-icon {
+  width: 24px;
+  height: 24px;
 }
 
 .container {
