@@ -362,7 +362,7 @@ section {
     transform: translateY(0%)
     }
 
-.portfolio-item:hover .cashless-payment {
+.portfolio-item:hover .slider {
   transform: translateY(0);
 }
 
@@ -374,12 +374,12 @@ section {
   overflow: hidden;
 }
 
-.cashless-payment-wrapper {
+.slider-wrapper {
   position: relative;
   overflow: hidden;
 }
 
-.cashless-payment {
+.slider {
   position: absolute;
   top: 0;
   background: #4d5ae5;
@@ -392,7 +392,7 @@ section {
   transition-duration: 250ms;
   transition-timing-function: linear;
 }
-.cashless-payment-paragraph {
+.slider-paragraph {
   color: #f4f4fd;
   font-size: 16px;
   line-height: 1.5;
