@@ -355,15 +355,23 @@ section {
 .portfolio-item:hover {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-    transform: translateY(0%);
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);;
 }
+
+.portfolio-item:hover .portfolio-description {
+    transform: translateY(0%)
+    }
 
 .portfolio-item:hover .cashless-payment {
   transform: translateY(0);
 }
 
 .portfolio-img {
+}
+
+.portfolio-img-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 .cashless-payment-wrapper {
